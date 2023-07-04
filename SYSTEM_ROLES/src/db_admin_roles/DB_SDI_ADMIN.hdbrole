@@ -1,0 +1,12 @@
+{
+	"role": {
+		"name": "DB_SDI_ADMIN",
+		"system_privileges": [
+			"CATALOG READ",
+            "CREATE REMOTE SOURCE",
+            "ADAPTER ADMIN",
+            "AGENT ADMIN",
+            "CREATE SCHEMA"
+		]
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"role": {
+		"name": "DB_USER_ADMIN",
+		"global_object_privileges": [
+			{
+				"name": "DEFAULT",
+				"type": "USERGROUP",
+				"privileges": ["OPERATOR"]
+			}
+		], 
+		"system_privileges": [
+			"CREATE USERGROUP", 
+			"CATALOG READ"
+		]
+	}
+}
+

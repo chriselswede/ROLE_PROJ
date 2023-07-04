@@ -1,0 +1,11 @@
+{
+	"role": {
+		"name": "DB_DATA_READER", 
+		"schema_privileges": [
+			{
+				"reference": "SAPHANADB_SCHEMA",
+				"privileges": ["SELECT"]
+			}
+		]
+	}
+}

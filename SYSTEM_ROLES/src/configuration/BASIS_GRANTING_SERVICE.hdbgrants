@@ -1,0 +1,106 @@
+
+{
+    "BASIS_GRANTING_SERVICE": {
+        "object_owner": {
+            "schema_privileges": [
+                {
+                    "schema": "_SYS_STATISTICS",
+                    "privileges_with_grant_option": [
+                        "SELECT",
+                        "INSERT",
+                        "DELETE",
+                        "UPDATE",
+                        "EXECUTE"
+                    ]
+                },
+               {
+                    "schema": "SAPHANADB",
+                    "privileges_with_grant_option": [
+                        "SELECT"
+                    ]
+                }
+            ],
+            "global_object_privileges": [
+                {
+                    "name": "DEFAULT",
+                    "type": "USERGROUP",
+                    "privileges_with_grant_option": [
+                        "OPERATOR"
+                    ]
+                }
+            ],
+            "object_privileges": [
+                {
+                    "schema": "SYS",
+                    "name": "PASSWORD_EXCLUDE_LIST",
+                    "type": "TABLE",
+                    "privileges_with_grant_option": [
+                        "SELECT",
+                        "INSERT",
+                        "UPDATE",
+                        "DELETE"
+                    ]
+                },
+               {
+                    "schema": "SYS",
+                    "name": "GET_INSUFFICIENT_PRIVILEGE_ERROR_DETAILS",
+                    "type": "PROCEDURE",
+                    "privileges_with_grant_option": [
+                        "EXECUTE"
+                    ]
+                },
+                {
+                    "schema": "SYSTEM",
+                    "name": "ALTER_JWT_PROVIDER",
+                    "type": "PROCEDURE",
+                    "privileges_with_grant_option": [
+                        "EXECUTE"
+                    ]
+                }
+            ],
+            "system_privileges": [
+                {
+                    "privileges_with_admin_option": [
+                        "ADAPTER ADMIN",
+                        "AGENT ADMIN",
+                        "ATTACH DEBUGGER",
+                        "AUDIT ADMIN",
+                        "AUDIT OPERATOR",
+                        "AUDIT READ",
+                        "CATALOG READ",
+                        "CERTIFICATE ADMIN",
+                        "CLIENT PARAMETER ADMIN",
+                        "CREATE JWT PROVIDER",
+                        "CREATE SAML PROVIDER",
+                        "CREATE REMOTE SOURCE",
+                        "CREATE SCENARIO",
+                        "CREATE SCHEMA",
+                        "CREATE USERGROUP",
+                        "CREATE X509 PROVIDER",
+                        "CREATE JWT PROVIDER",
+                        "CREDENTIAL ADMIN",
+                        "ENCRYPTION ROOT KEY ADMIN",
+                        "EXPORT",
+                        "IMPORT",
+                        "INIFILE ADMIN",
+                        "LOG ADMIN",
+                        "MONITOR ADMIN",
+                        "OPTIMIZER ADMIN",
+                        "RESOURCE ADMIN",
+                        "SAVEPOINT ADMIN",
+                        "SCENARIO ADMIN",
+                        "SERVICE ADMIN",
+                        "SESSION ADMIN",
+                        "TABLE ADMIN",
+                        "TRACE ADMIN",
+                        "TRUST ADMIN",
+                        "WORKLOAD ADMIN",
+                        "WORKLOAD ANALYZE ADMIN",
+                        "WORKLOAD CAPTURE ADMIN",
+                        "WORKLOAD REPLAY ADMIN"
+                    ]
+                }
+            ]
+        }
+    }
+}

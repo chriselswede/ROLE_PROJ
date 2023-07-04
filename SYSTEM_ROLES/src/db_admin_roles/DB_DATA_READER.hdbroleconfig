@@ -1,0 +1,7 @@
+{
+	"DB_DATA_READER": {
+		"SAPHANADB_SCHEMA": {
+			"schema": "SAPHANADB"
+		}
+	}
+}

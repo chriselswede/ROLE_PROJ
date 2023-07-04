@@ -1,0 +1,19 @@
+{
+	"role": {
+		"name": "DB_SDI_TECH",
+		"system_privileges": [
+			"CATALOG READ",
+            "CREATE REMOTE SOURCE",
+            "ADAPTER ADMIN",
+            "AGENT ADMIN",
+            "CREATE SCHEMA"
+		],
+		"global_object_privileges": [
+			{
+				"name": "DEFAULT",
+				"type": "USERGROUP",
+				"privileges": ["OPERATOR"]
+			}
+		]
+	}
+}

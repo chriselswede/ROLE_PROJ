@@ -1,0 +1,20 @@
+PROCEDURE "SET_USER_TRACE" ( IN user_name NVARCHAR(256), IN context_name NVARCHAR(256) )
+LANGUAGE SQLSCRIPT
+SQL SECURITY DEFINER
+AS
+	counter INTEGER := 0;
+	trace_set_statement NVARCHAR(1024);
+BEGIN
+	DECLARE USERNOTEXIST CONDITION FOR SQL_ERROR_CODE 11001;
+	DECLARE EXIT HANDLER FOR USERNOTEXIST RESIGNAL;
+	-- check input user
+	SELECT COUNT (*) INTO counter FROM (select * from "sys.users" where USER_NAME = :user_name);
+	if (counter != 1) then
+		SIGNAL USERNOTEXIST SET MESSAGE_TEXT = 'User does not exist: ' || :user_name;
+	end if;
+	-- Make and run the two statements needed to set the user trace
+	trace_set_statement := 'ALTER SYSTEM ALTER CONFIGURATION (''global.ini'',''SYSTEM'') SET (''traceprofile_' || :context_name || ''', ''sql_user'') = ''' || :user_name || ''' WITH RECONFIGURE';
+	EXEC trace_set_statement;
+	trace_set_statement := 'ALTER SYSTEM ALTER CONFIGURATION (''indexserver.ini'',''SYSTEM'') SET (''traceprofile_' || :context_name || ''', ''authorization'') = ''info'' WITH RECONFIGURE';
+	EXEC trace_set_statement;
+END;

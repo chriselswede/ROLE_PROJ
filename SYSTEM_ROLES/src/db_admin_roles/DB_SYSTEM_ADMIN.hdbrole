@@ -1,0 +1,34 @@
+{
+    "role": {
+        "name": "DB_SYSTEM_ADMIN",
+        "schema_roles": [
+            {
+                "names": [ "SELECT__SYS_STATISTICS" ]
+            },
+            {
+                "names": [ "FULL__SYS_STATISTICS" ]
+            }
+        ],
+        "system_privileges": [
+            "CATALOG READ",
+            "CERTIFICATE ADMIN",
+            "CREATE REMOTE SOURCE",
+            "ADAPTER ADMIN",
+            "AGENT ADMIN",
+            "CREATE SCHEMA",
+            "INIFILE ADMIN",
+            "LOG ADMIN",
+            "OPTIMIZER ADMIN",
+            "RESOURCE ADMIN",
+            "SAVEPOINT ADMIN",
+            "SERVICE ADMIN",
+            "SESSION ADMIN",
+            "TABLE ADMIN",
+            "TRACE ADMIN",
+            "WORKLOAD ADMIN",
+            "WORKLOAD ANALYZE ADMIN",
+            "WORKLOAD CAPTURE ADMIN",
+            "WORKLOAD REPLAY ADMIN"
+        ]
+    }
+}

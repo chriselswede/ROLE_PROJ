@@ -1,0 +1,10 @@
+PROCEDURE "UNSET_USER_TRACE" ( IN context_name NVARCHAR(256) )
+LANGUAGE SQLSCRIPT
+SQL SECURITY DEFINER
+AS
+	trace_unset_statement NVARCHAR(1024);
+BEGIN
+	-- Make and run the statement needed to unset the user trace
+	trace_unset_statement := 'ALTER SYSTEM ALTER CONFIGURATION (''indexserver.ini'',''SYSTEM'') UNSET (''traceprofile_' || :context_name || ''', ''authorization'') WITH RECONFIGURE';
+	EXEC trace_unset_statement;
+END;
