@@ -1,0 +1,11 @@
+{
+	"role": {
+		"name": "DB_SDA_ADMIN",
+		"system_privileges": [
+			"CATALOG READ",
+			"CREATE REMOTE SOURCE",
+			"CREDENTIAL ADMIN",
+			"CREATE SCHEMA"
+        ]
+    }
+}
