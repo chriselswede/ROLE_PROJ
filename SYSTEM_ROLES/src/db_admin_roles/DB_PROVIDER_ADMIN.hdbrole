@@ -1,0 +1,30 @@
+{
+    "role": {
+        "name": "DB_PROVIDER_ADMIN",
+        "global_object_privileges": [
+            {
+                "name": "TEST_PROVIDER",
+                "type": "JWT PROVIDER",
+                "privileges": ["ALTER", "REFERENCES"]
+            }
+        ],
+        "object_privileges": [
+            {
+                "name": "system.alter_jwt_provider",
+                "type": "PROCEDURE",
+                "privileges": ["EXECUTE"]
+            },
+            {
+                "name": "system.create_jwt_provider",
+                "type": "PROCEDURE",
+                "privileges": ["EXECUTE"]
+            },
+            {
+                "name": "system.drop_jwt_provider",
+                "type": "PROCEDURE",
+                "privileges": ["EXECUTE"]
+            }
+        ]
+    }
+}
+
