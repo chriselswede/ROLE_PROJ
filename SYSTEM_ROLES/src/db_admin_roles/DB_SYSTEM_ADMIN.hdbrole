@@ -1,6 +1,7 @@
 {
     "role": {
         "name": "DB_SYSTEM_ADMIN",
+        "global_roles": [ "SYSHDL_ROLE" ],
         "schema_roles": [
             {
                 "names": [ "SELECT__SYS_STATISTICS" ]

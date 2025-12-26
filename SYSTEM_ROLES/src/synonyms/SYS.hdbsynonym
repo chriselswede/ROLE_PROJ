@@ -11,6 +11,24 @@
             "schema": "SYS"
         }
     },
+    "system.alter_jwt_provider": {
+        "target": {
+            "object": "ALTER_JWT_PROVIDER",
+            "schema": "SYSTEM"
+        }
+    },
+    "system.create_jwt_provider": {
+        "target": {
+            "object": "CREATE_JWT_PROVIDER",
+            "schema": "SYSTEM"
+        }
+    },
+    "system.drop_jwt_provider": {
+        "target": {
+            "object": "DROP_JWT_PROVIDER",
+            "schema": "SYSTEM"
+        }
+    },
     "sys.m_password_policy": {
         "target": {
             "object": "M_PASSWORD_POLICY",

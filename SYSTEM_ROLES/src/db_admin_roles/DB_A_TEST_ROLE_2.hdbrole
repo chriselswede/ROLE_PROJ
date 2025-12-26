@@ -1,8 +1,0 @@
-{
-    "role": {
-        "name": "DB_A_TEST_ROLE_2",
-        "system_privileges": [
-            "CATALOG READ"
-        ]
-    }
-}

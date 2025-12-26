@@ -1,6 +1,11 @@
 {
     "BASIS_GRANTING_SERVICE": {
         "object_owner": {
+            "global_roles": [ 
+                {
+                    "roles_with_admin_option": [ "SYSHDL_ROLE" ]
+                } 
+            ],
             "schema_privileges": [
                 {
                     "schema": "_SYS_STATISTICS",
@@ -25,6 +30,13 @@
                     "type": "USERGROUP",
                     "privileges_with_grant_option": [
                         "OPERATOR"
+                    ]
+                },
+                {
+                    "name": "TEST_PROVIDER",
+                    "type": "JWT PROVIDER",
+                    "privileges_with_grant_option": [
+                        "ALTER", "REFERENCES", "DROP"
                     ]
                 }
             ],
@@ -55,6 +67,22 @@
                     "privileges_with_grant_option": [
                         "EXECUTE"
                     ]
+                },
+                {
+                    "schema": "SYSTEM",
+                    "name": "CREATE_JWT_PROVIDER",
+                    "type": "PROCEDURE",
+                    "privileges_with_grant_option": [
+                        "EXECUTE"
+                    ]
+                },
+                {
+                    "schema": "SYSTEM",
+                    "name": "DROP_JWT_PROVIDER",
+                    "type": "PROCEDURE",
+                    "privileges_with_grant_option": [
+                        "EXECUTE"
+                    ]
                 }
             ],
             "system_privileges": [
@@ -66,6 +94,7 @@
                         "AUDIT ADMIN",
                         "AUDIT OPERATOR",
                         "AUDIT READ",
+                        "BACKUP ADMIN",
                         "CATALOG READ",
                         "CERTIFICATE ADMIN",
                         "CLIENT PARAMETER ADMIN",
@@ -74,6 +103,7 @@
                         "CREATE REMOTE SOURCE",
                         "CREATE SCENARIO",
                         "CREATE SCHEMA",
+                        "CREATE STRUCTURED PRIVILEGE",
                         "CREATE USERGROUP",
                         "CREATE X509 PROVIDER",
                         "CREATE JWT PROVIDER",
@@ -103,3 +133,4 @@
         }
     }
 }
+
